@@ -2,13 +2,13 @@
 <meta name="xm-bind-id-api_compat" content="latest">
 <meta name="xm-bind-id-disable_state_validation" content="false">
 
-<meta name="xm-bind-id-redirect_uri" content="http://localhost:3000/HOME">
+<meta name="xm-bind-id-redirect_uri" content="https://demo-transmit.herokuapp.com/HOME">
 <meta name="xm-bind-id-nonce" content="12345">
 <meta name="xm-bind-id-state" content="demo_state">
 <meta name="xm-bind-id-scope" content="bindid_network_info">
 <meta name="xm-bind-id-verifications" content="phone email">
 <meta name="xm-bind-id-custom_message" content="Login using Your RP">
-<meta name="xm-bind-id-aux_link" content="http://localhost:3000/HOME">
+<meta name="xm-bind-id-aux_link" content="https://demo-transmit.herokuapp.com/HOME">
 <meta name="xm-bind-id-aux_link_title" content="More ways to verify">
 <meta name="xm-bind-id-login_hint" content="email:user@email.com">
 
@@ -23,7 +23,7 @@
 
 function invokeBindId() {
     window.XmBindId.authenticate({
-        redirectUri: 'http://localhost:3000/home',
+        redirectUri: 'https://demo-transmit.herokuapp.com/home',
         scope: [window.XmBindId.XmBindIdScopeType.Phone, window.XmBindId.XmBindIdScopeType.Email],
         verifications: [window.XmBindId.XmRequiredVerifications.Phone, window.XmBindId.XmRequiredVerifications.Email],
 
