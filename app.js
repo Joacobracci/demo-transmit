@@ -6,12 +6,13 @@ var routes = require("./routes");
 var app = express();
 
 
+
 app.set("port", process.env.PORT || 5000);
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 app.use(routes);
-app.use(express.static("./views/static"));
+app.use("/static",express.static("static"));
 
 
 app.listen(app.get("port"), function(){
