@@ -1,7 +1,6 @@
 <meta name="xm-bind-id-client_id" content="ea854282.0bee69f4.tid_671f9079.bindid.io">
 
 
-<h1>Si estamos aca es porque validó</h1>
 
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CPromise.prototype.finally%2CTextDecoder%2CTextEncoder%2CObject.entries"></script>
@@ -11,9 +10,29 @@
 
 <script>
 
+    var url = window.location;
+
+    var code = new URLSearchParams(url.search).get("code");
+    console.log(code)
 
     function sendAuthCodeToServer(authCode) {
-     // Add code to send the authCode to your application server here
+
+        const XHR = new XMLHttpRequest();
+        XHR.addEventListener("load", (event) => {
+            alert("Datos Enviados!")
+        })
+
+        XHR.addEventListener("error", (event) => {
+            alert("Error Enviando los datos.")
+        })
+
+        XHR.open("POST",);
+        XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        var data = new FormData()
+        data.append("data")
+        XHR.send(code)
+        
+        
     }
     function handleError(err) {
         console.log(err.message)
@@ -24,24 +43,36 @@
      .then(res => { sendAuthCodeToServer(res.code); },
          err => { handleError(err); })
 
+    function sendData(){
+        const XHR = new XMLHttpRequest();
+        XHR.open("POST", "/auth", true);
+        XHR.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        var data = new FormData()
+        data.append("code" , code)
+        XHR.send(JSON.stringify({
+            "code" : code
+        }));
+        
+    }
+         
 
   </script>
-
-
 
 
 
 <body class="d-flex h-100 text-center text-white bg-dark">
     
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      
-    
-      <main class="px-3">
-       
-        <h1>Bienvenido, </h1>
-        <p class="lead">Todas tus automatizaciones en un solo lugar</p>
         
-      </main>
+        
+        <main class="px-3">
+            
+            <h1>Bienvenido, </h1>
+            <h3>Pagina Home, Primera Autenticacion Verificada</h3>
+            <p class="lead">Ahora nos queda solicitar la informacion del Usuario a BIND ID</p>
+            <button class="w-100 btn btn-lg btn-info" onclick="sendData()"> Solicitar Datos del Usuario</button>
+            
+        </main>
     
       <footer class="mt-auto text-white-50">
         <p>Desde VR4, para nuestros clientes.</p>

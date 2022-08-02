@@ -1,5 +1,5 @@
 <meta name="xm-bind-id-client_id" content="ea854282.0bee69f4.tid_671f9079.bindid.io">
-<meta name="xm-bind-id-redirect_uri" content="https://demo-transmit.herokuapp.com/home">
+<meta name="xm-bind-id-redirect_uri" content="http://localhost:5000/home">
 
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CPromise.prototype.finally%2CTextDecoder%2CTextEncoder%2CObject.entries"></script>
@@ -11,14 +11,10 @@
 <link href="./static/css/index.css" rel="stylesheet">
 
 
-
-
     <div class="form-signin">
       <img class="mb-4" src="static/img/VR4.png" alt="" width="300" height="200">
       
-
       <h1 class="h3 mb-3 fw-normal">Ingrese con sus datos</h1>
-      <input type="hidden" name='csrf_token' value="{{ csrf_token() }}">
       <div class="form-floating">
         <input type="text" class="form-control" name="username" placeholder="Username">
         <label for="username">Username</label>
