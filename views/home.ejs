@@ -1,1 +1,51 @@
+<meta name="xm-bind-id-client_id" content="ea854282.0bee69f4.tid_671f9079.bindid.io">
+
+
 <h1>Si estamos aca es porque validó</h1>
+
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CPromise.prototype.finally%2CTextDecoder%2CTextEncoder%2CObject.entries"></script>
+<script src="https://signin.bindid-sandbox.io/bindid-sdk/transmit-bind-id-sdk.js" defer></script>
+<link href="./static/css/home.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<script>
+
+
+    function sendAuthCodeToServer(authCode) {
+     // Add code to send the authCode to your application server here
+    }
+    function handleError(err) {
+        console.log(err.message)
+     // Add code to process the authentication error here
+    }
+
+    window.XmBindId.processRedirectResponse()
+     .then(res => { sendAuthCodeToServer(res.code); },
+         err => { handleError(err); })
+
+
+  </script>
+
+
+
+
+
+<body class="d-flex h-100 text-center text-white bg-dark">
+    
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      
+    
+      <main class="px-3">
+       
+        <h1>Bienvenido, </h1>
+        <p class="lead">Todas tus automatizaciones en un solo lugar</p>
+        
+      </main>
+    
+      <footer class="mt-auto text-white-50">
+        <p>Desde VR4, para nuestros clientes.</p>
+      </footer>
+      
+       
+    </div>
