@@ -30,7 +30,7 @@
     sendData();
 
     function getUserData(){
-        fetch("http://localhost:5000/getUserData")
+        fetch("https://demo-transmit.herokuapp.com/getUserData")
         .then(response => response.json())
         .then(data => document.getElementById('data').innerHTML = JSON.stringify(data));
 

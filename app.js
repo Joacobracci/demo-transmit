@@ -9,7 +9,7 @@ var app = express();
 
 
 // Variables que usa la api para validar que somos nosotros como empresa
-var redirect_uri ="http://localhost:5000/home";
+var redirect_uri ="https://demo-transmit.herokuapp.com/home";
 var clientID = "ea854282.0bee69f4.tid_671f9079.bindid.io";
 var clientSecret = "911f24e5-5141-40b4-9ffb-115b04f48f00";
 
