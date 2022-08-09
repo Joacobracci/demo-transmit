@@ -360,4 +360,18 @@ position: fixed;
 -moz-transform: translate(95vw,90vh);
 transform: translate(95vw,90vh);
 transform: translate(95vw,90vh);
+<<<<<<< Updated upstream
+=======
+}
+
+
+.dataRes {
+  text-align: left;
+  color: rgb(244, 87, 87);
+  line-height: 60px;
+  font-size: 20px;
+  justify-content: center;
+
+
+>>>>>>> Stashed changes
 }
