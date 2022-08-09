@@ -361,3 +361,13 @@ position: fixed;
 transform: translate(95vw,90vh);
 transform: translate(95vw,90vh);
 }
+
+
+.dataRes {
+  text-align: left;
+  color: rgb(244, 87, 87);
+  line-height: 60px;
+  font-size: 20px;
+
+
+}
