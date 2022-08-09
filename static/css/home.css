@@ -360,8 +360,7 @@ position: fixed;
 -moz-transform: translate(95vw,90vh);
 transform: translate(95vw,90vh);
 transform: translate(95vw,90vh);
-<<<<<<< Updated upstream
-=======
+
 }
 
 
@@ -371,7 +370,4 @@ transform: translate(95vw,90vh);
   line-height: 60px;
   font-size: 20px;
   justify-content: center;
-
-
->>>>>>> Stashed changes
 }
